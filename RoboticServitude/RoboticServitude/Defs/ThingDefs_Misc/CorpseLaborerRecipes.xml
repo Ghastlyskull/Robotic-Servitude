@@ -1,0 +1,60 @@
+<Defs ParentName="RecipeBase">
+    <defName>MakeCorpseLaborer</defName>
+    <label>assemble corpse laborer</label>
+    <description>Assemble a Corpse Laborer from the remains of the dead, steel, plasteel, components, and a standard subcore in a Large Mech Gestator.</description>
+    <workAmount>360000</workAmount>
+    <workSpeedStat>WorkToMake</workSpeedStat>
+    <efficiencyStat>SmithingSpeed</efficiencyStat>
+    <recipeUsers>
+        <li>LargeMechGestator</li> <!-- Ensure this defName matches the DLC item -->
+    </recipeUsers>
+    <ingredientCount>5</ingredientCount>
+    <ingredients>
+        <li>
+            <filter>
+                <thingDefs>
+                    <li>Corpse_Human</li>
+                </thingDefs>
+            </filter>
+            <count>1</count>
+        </li>
+        <li>
+            <filter>
+                <thingDefs>
+                    <li>Steel</li>
+                </thingDefs>
+            </filter>
+            <count>80</count>
+        </li>
+        <li>
+            <filter>
+                <thingDefs>
+                    <li>Plasteel</li>
+                </thingDefs>
+            </filter>
+            <count>40</count>
+        </li>
+        <li>
+            <filter>
+                <thingDefs>
+                    <li>ComponentIndustrial</li>
+                </thingDefs>
+            </filter>
+            <count>4</count>
+        </li>
+        <li>
+            <filter>
+                <thingCategories>
+                    <li>StandardSubcore</li> <!-- This needs to match your defined categories or specific item -->
+                </thingCategories>
+            </filter>
+            <count>1</count>
+        </li>
+    </ingredients>
+    <products>
+        <CorpseLaborer>1</CorpseLaborer>
+    </products>
+    <skillRequirements>
+        <Crafting>10</Crafting> <!-- Adjust based on the difficulty of crafting -->
+    </skillRequirements>
+</Defs>
