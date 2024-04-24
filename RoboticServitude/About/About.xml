@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
+	<packageId>Ghastly.Robotic_Servitude</packageId>
     <name>Robotic Servitude</name>
     <author>ghastlyskull</author>
     <supportedVersions>
-		<li>1.4</li>
 		<li>1.5</li>
 	</supportedVersions>
 	<modDependencies>
