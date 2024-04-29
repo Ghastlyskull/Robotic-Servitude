@@ -155,7 +155,7 @@
         <maskPath>Things/Pawn/Mechanoid/CorpseLaborer/Servant</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1.6</drawSize>
+        <drawSize>1.7</drawSize>
       </bodyGraphicData>
     </li>
     <li>
@@ -164,7 +164,7 @@
         <maskPath>Things/Pawn/Mechanoid/CorpseLaborer/Servant</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1.6</drawSize>
+        <drawSize>1.7</drawSize>
       </bodyGraphicData>
     </li>
   </lifeStages>
@@ -225,7 +225,7 @@
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Beamstrider</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1.6</drawSize>
+        <drawSize>1.7</drawSize>
       </bodyGraphicData>
     </li>
     <li>
@@ -234,7 +234,7 @@
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Beamstrider</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1.6</drawSize>
+        <drawSize>1.7</drawSize>
       </bodyGraphicData>
     </li>
   </lifeStages>
