@@ -62,7 +62,11 @@
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Building_MechGestator_Notify_HauledTo_Patch.cs" />
+    <Compile Include="CompGlitchVolatility.cs" />
+    <Compile Include="CompProperties_GlitchVolatility.cs" />
     <Compile Include="RoboticServitudeMod.cs" />
+    <Compile Include="Widgets_GetIconFor_Patch.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

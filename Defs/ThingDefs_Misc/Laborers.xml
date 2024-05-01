@@ -139,6 +139,17 @@
       </li>
     </detritusLeavings>
   </race>
+  <comps>
+	<li Class="RoboticServitude.CompProperties_GlitchVolatility">
+		<mentalBreakRatePerDay>100</mentalBreakRatePerDay>
+		<mentalBreaks>
+			<li>Wander_Psychotic</li>
+			<li>Wander_Sad</li>
+			<li>Berserk</li>
+			<li>MurderousRage</li>
+		</mentalBreaks>
+	</li>
+  </comps>
 </ThingDef>
 
 <PawnKindDef ParentName="Gha_NonCombatMediumMechanoidKind">
@@ -211,6 +222,17 @@
     <BandwidthCost>3</BandwidthCost>
     <ControlTakingTime>18</ControlTakingTime>
   </statBases>
+  <comps>
+	<li Class="RoboticServitude.CompProperties_GlitchVolatility">
+		<mentalBreakRatePerDay>100</mentalBreakRatePerDay>
+		<mentalBreaks>
+			<li>Wander_Psychotic</li>
+			<li>Wander_Sad</li>
+			<li>Berserk</li>
+			<li>MurderousRage</li>
+		</mentalBreaks>
+	</li>
+  </comps>
 </ThingDef>
 
 <PawnKindDef ParentName="BaseMechanoidKind">
