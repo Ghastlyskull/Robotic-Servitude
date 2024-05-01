@@ -141,7 +141,7 @@
   </race>
   <comps>
 	<li Class="RoboticServitude.CompProperties_GlitchVolatility">
-		<mentalBreakRatePerDay>100</mentalBreakRatePerDay>
+		<mentalBreakRatePerDay>1</mentalBreakRatePerDay>
 		<mentalBreaks>
 			<li>Wander_Psychotic</li>
 			<li>Wander_Sad</li>
@@ -224,7 +224,7 @@
   </statBases>
   <comps>
 	<li Class="RoboticServitude.CompProperties_GlitchVolatility">
-		<mentalBreakRatePerDay>100</mentalBreakRatePerDay>
+		<mentalBreakRatePerDay>1</mentalBreakRatePerDay>
 		<mentalBreaks>
 			<li>Wander_Psychotic</li>
 			<li>Wander_Sad</li>
