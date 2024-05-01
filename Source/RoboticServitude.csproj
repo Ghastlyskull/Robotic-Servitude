@@ -63,8 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building_MechGestator_Notify_HauledTo_Patch.cs" />
+    <Compile Include="CompCanEquipWeapons.cs" />
     <Compile Include="CompGlitchVolatility.cs" />
     <Compile Include="CompProperties_GlitchVolatility.cs" />
+    <Compile Include="FloatMenuMakerMap_ChoicesAtFor_Patch.cs" />
+    <Compile Include="ITab_Pawn_Gear_CanControl.cs" />
+    <Compile Include="ITab_Pawn_Gear_CanControlColonist.cs" />
     <Compile Include="RoboticServitudeMod.cs" />
     <Compile Include="Widgets_GetIconFor_Patch.cs" />
   </ItemGroup>

@@ -31,6 +31,11 @@
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
       </li>
     </tools>
+	<comps>
+		<li>
+			<compClass>RoboticServitude.CompCanEquipWeapons</compClass>
+		</li>
+	</comps>
   </ThingDef>
 
   <PawnKindDef Name="Gha_MediumMechanoidKind" ParentName="BaseMechanoidKind" Abstract="True">
@@ -40,6 +45,7 @@
     <techHediffsChance>1</techHediffsChance>
     <techHediffsMoney>9999~9999</techHediffsMoney>
     <controlGroupPortraitZoom>1.8</controlGroupPortraitZoom>
+	<destroyGearOnDrop>false</destroyGearOnDrop>
   </PawnKindDef>
 
   <PawnKindDef Name="Gha_NonCombatMediumMechanoidKind" ParentName="Gha_MediumMechanoidKind" Abstract="True">
@@ -266,5 +272,6 @@
   </weaponTags>
   <techHediffsChance>1</techHediffsChance>
   <techHediffsMoney>9999~9999</techHediffsMoney>
+	<destroyGearOnDrop>false</destroyGearOnDrop>
 </PawnKindDef>
 </Defs>
