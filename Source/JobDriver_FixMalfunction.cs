@@ -16,9 +16,8 @@ namespace RoboticServitude
         {
             this.FailOnDestroyedOrNull(TargetIndex.A);
             this.FailOnForbidden(TargetIndex.A);
-            this.FailOn(() => Mech.IsAttacking());
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
-            Toil toil = Toils_General.WaitWith(TargetIndex.A, 4 * GenDate.TicksPerHour, useProgressBar: true, maintainPosture: true, maintainSleep: true);
+            Toil toil = Toils_General.WaitWith(TargetIndex.A, 2 * GenDate.TicksPerHour, useProgressBar: true, maintainPosture: true, maintainSleep: true);
             toil.WithEffect(EffecterDefOf.MechRepairing, TargetIndex.A);
             toil.PlaySustainerOrSound(SoundDefOf.RepairMech_Touch);
             toil.AddFinishAction(delegate
