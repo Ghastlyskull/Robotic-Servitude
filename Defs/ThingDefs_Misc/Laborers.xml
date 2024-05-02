@@ -31,11 +31,6 @@
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
       </li>
     </tools>
-	<comps>
-		<li>
-			<compClass>RoboticServitude.CompCanEquipWeapons</compClass>
-		</li>
-	</comps>
   </ThingDef>
 
   <PawnKindDef Name="Gha_MediumMechanoidKind" ParentName="BaseMechanoidKind" Abstract="True">
@@ -169,7 +164,7 @@
     <li MayRequire="Ludeon.RimWorld.Biotech">
       <bodyGraphicData>
         <texPath>Things/Pawn/Mechanoid/CorpseLaborer/Servant</texPath>
-        <maskPath>Things/Pawn/Mechanoid/CorpseLaborer/Servant</maskPath>
+        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/CorpseLaborer/ServantMask</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
         <drawSize>1.7</drawSize>
@@ -178,7 +173,7 @@
     <li>
       <bodyGraphicData>
         <texPath>Things/Pawn/Mechanoid/CorpseLaborer/Servant</texPath>
-        <maskPath>Things/Pawn/Mechanoid/CorpseLaborer/Servant</maskPath>
+        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/CorpseLaborer/ServantMask</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
         <drawSize>1.7</drawSize>
@@ -238,6 +233,9 @@
 			<li>MurderousRage</li>
 		</mentalBreaks>
 	</li>
+	  <li>
+			<compClass>RoboticServitude.CompCanEquipWeapons</compClass>
+    </li>
   </comps>
 </ThingDef>
 
@@ -250,7 +248,7 @@
     <li>
       <bodyGraphicData>
         <texPath>Things/Pawn/Mechanoid/CorpseLaborer/Servant</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Beamstrider</maskPath>
+        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/CorpseLaborer/ServantMask</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
         <drawSize>1.7</drawSize>
@@ -259,7 +257,7 @@
     <li>
       <bodyGraphicData>
         <texPath>Things/Pawn/Mechanoid/CorpseLaborer/Servant</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Beamstrider</maskPath>
+        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/CorpseLaborer/ServantMask</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
         <drawSize>1.7</drawSize>
