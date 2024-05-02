@@ -24,7 +24,7 @@ namespace RoboticServitude
                 {
                     SetNextMentalBreakTick();
                 }
-                if (Find.TickManager.TicksGame >= nextMentalBreakTick)
+                if (nextMentalBreakTick != null && Find.TickManager.TicksGame >= nextMentalBreakTick)
                 {
                     pawn.mindState.mentalStateHandler.TryStartMentalState(Props.mentalBreaks.RandomElement());
                     nextMentalBreakTick = null;
@@ -34,7 +34,14 @@ namespace RoboticServitude
 
         public void SetNextMentalBreakTick()
         {
-            nextMentalBreakTick = (int)(Find.TickManager.TicksGame + (GenDate.TicksPerDay / Props.mentalBreakRatePerDay));
+            if (Props.mentalBreakRatePerDay > 0)
+            {
+                nextMentalBreakTick = (int)(Find.TickManager.TicksGame + (GenDate.TicksPerDay / Props.mentalBreakRatePerDay));
+            }
+            else
+            {
+                nextMentalBreakTick = null;
+            }
         }
 
         public override void PostExposeData()
