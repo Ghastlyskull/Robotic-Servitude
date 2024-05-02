@@ -31,6 +31,11 @@
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
       </li>
     </tools>
+	<comps>
+		<li>
+			<compClass>RoboticServitude.CompCanEquipWeapons</compClass>
+		</li>
+	</comps>
   </ThingDef>
 
   <PawnKindDef Name="Gha_MediumMechanoidKind" ParentName="BaseMechanoidKind" Abstract="True">
@@ -40,6 +45,7 @@
     <techHediffsChance>1</techHediffsChance>
     <techHediffsMoney>9999~9999</techHediffsMoney>
     <controlGroupPortraitZoom>1.8</controlGroupPortraitZoom>
+	<destroyGearOnDrop>false</destroyGearOnDrop>
   </PawnKindDef>
 
   <PawnKindDef Name="Gha_NonCombatMediumMechanoidKind" ParentName="Gha_MediumMechanoidKind" Abstract="True">
@@ -139,6 +145,17 @@
       </li>
     </detritusLeavings>
   </race>
+  <comps>
+	<li Class="RoboticServitude.CompProperties_GlitchVolatility">
+		<mentalBreakRatePerDay>1</mentalBreakRatePerDay>
+		<mentalBreaks>
+			<li>Wander_Psychotic</li>
+			<li>Wander_Sad</li>
+			<li>Berserk</li>
+			<li>MurderousRage</li>
+		</mentalBreaks>
+	</li>
+  </comps>
 </ThingDef>
 
 <PawnKindDef ParentName="Gha_NonCombatMediumMechanoidKind">
@@ -211,6 +228,17 @@
     <BandwidthCost>3</BandwidthCost>
     <ControlTakingTime>18</ControlTakingTime>
   </statBases>
+  <comps>
+	<li Class="RoboticServitude.CompProperties_GlitchVolatility">
+		<mentalBreakRatePerDay>1</mentalBreakRatePerDay>
+		<mentalBreaks>
+			<li>Wander_Psychotic</li>
+			<li>Wander_Sad</li>
+			<li>Berserk</li>
+			<li>MurderousRage</li>
+		</mentalBreaks>
+	</li>
+  </comps>
 </ThingDef>
 
 <PawnKindDef ParentName="BaseMechanoidKind">
@@ -244,5 +272,6 @@
   </weaponTags>
   <techHediffsChance>1</techHediffsChance>
   <techHediffsMoney>9999~9999</techHediffsMoney>
+	<destroyGearOnDrop>false</destroyGearOnDrop>
 </PawnKindDef>
 </Defs>
