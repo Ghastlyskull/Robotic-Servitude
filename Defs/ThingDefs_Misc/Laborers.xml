@@ -12,7 +12,7 @@
     <race>
       <body>Scorcher</body>
       <intelligence>ToolUser</intelligence>
-      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <thinkTreeMain>Gha_Laborer</thinkTreeMain>
       <baseBodySize>0.7</baseBodySize>
       <mechWeightClass>Medium</mechWeightClass>
     </race>
@@ -189,7 +189,7 @@
   <label>Combat Laborer</label>
   <description>[PlaceHolder]</description>
   <race>
-
+      <thinkTreeMain>Gha_Laborer</thinkTreeMain>
     <lifeStageAges Inherit="False">
       <li>
         <def>MechanoidFullyFormed</def>
