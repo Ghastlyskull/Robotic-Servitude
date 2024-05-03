@@ -133,7 +133,7 @@
             </li>
         </ingredients>
         <products>
-          <Gha_Corpse_Laborer>1</Gha_Corpse_Laborer>
+          <Gha_Combat_Laborer>1</Gha_Combat_Laborer>
         </products>
         <descriptionHyperlinks>
           <ThingDef>Gha_Combat_Laborer</ThingDef>
