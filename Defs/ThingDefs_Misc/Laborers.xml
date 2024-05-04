@@ -265,10 +265,10 @@
     </li>
   </lifeStages>
   <weaponMoney>9999~9999</weaponMoney>
-  <weaponTags>
-    <li>BeamGraserGun</li>
-  </weaponTags>
   <techHediffsChance>1</techHediffsChance>
+  <fixedInventory>
+    <Gun_BoltActionRifle />
+  </fixedInventory>
   <techHediffsMoney>9999~9999</techHediffsMoney>
 	<destroyGearOnDrop>false</destroyGearOnDrop>
 </PawnKindDef>
