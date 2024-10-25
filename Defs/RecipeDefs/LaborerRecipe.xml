@@ -33,7 +33,7 @@
     <!--Assassin Recipe Def-->
     <RecipeDef Name="Gha_MediumAssassinLaborerMechanoidRecipe" MayRequire="Ludeon.RimWorld.Anomaly" ParentName="BaseMechanoidRecipe" Abstract="True">
       <gestationCycles>3</gestationCycles>
-      <researchPrerequisite>StandardMechtech</researchPrerequisite>
+      <researchPrerequisite>HighMechtech</researchPrerequisite>
       <recipeUsers>
         <li>LargeMechGestator</li>
       </recipeUsers>
