@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!---->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+                    <xpath>Defs/RecipeDef[defName = "ResurrectMediumMech"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>Corpse_Gha_Corpse_Laborer</li>
+                    </value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<!---->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+                    <xpath>Defs/RecipeDef[defName = "ResurrectMediumMech"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>Corpse_Gha_Combat_Laborer</li>
+                    </value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+		<!---->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName = "ResurrectMediumMech"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>Corpse_Gha_Assassin_Laborer</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
