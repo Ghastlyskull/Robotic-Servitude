@@ -53,8 +53,9 @@
   <label>Laborer</label>
   <description>A reanimated pawn brought back to life to serve its new masters. Bound to serve eternally, these tireless entities perform the colony's laborious tasks.</description>
   <statBases>
-    <MoveSpeed>4.5</MoveSpeed>
-    <BandwidthCost>1</BandwidthCost>
+	<FoodPoisonChance>0.010</FoodPoisonChance>
+	<MoveSpeed>4.5</MoveSpeed>
+	<BandwidthCost>1</BandwidthCost>
   </statBases>
   <tools>
     <li>
