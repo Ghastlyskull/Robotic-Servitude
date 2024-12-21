@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef Name="Gha_MediumLaborerMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+        <gestationCycles>3</gestationCycles>
+        <researchPrerequisite>StandardMechtech</researchPrerequisite>
+        <recipeUsers>
+          <li>LargeMechGestator</li>
+        </recipeUsers>
+        
+        <fixedIngredientFilter>
+          <categories>
+            <li>CorpsesHumanlike</li>
+          </categories>
+          <disallowedCategories>
+            <li>CorpsesMechanoid</li>
+            <li>CorpsesAnimal</li>
+            <li>CorpsesEntity</li>
+          </disallowedCategories>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+          <thingDefs>
+            <li>Corpse_Human</li>
+          </thingDefs>
+          <specialFiltersToAllow>
+            <li>AllowCorpsesColonist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">AllowCorpsesSlave</li>
+            <li>AllowCorpsesStranger</li>
+          </specialFiltersToAllow>
+        </defaultIngredientFilter>
+        <autoStripCorpses>false</autoStripCorpses>
+    </RecipeDef>
+
+    <!--Assassin Recipe Def-->
+    <RecipeDef Name="Gha_MediumAssassinLaborerMechanoidRecipe" MayRequire="Ludeon.RimWorld.Anomaly" ParentName="BaseMechanoidRecipe" Abstract="True">
+      <gestationCycles>3</gestationCycles>
+      <researchPrerequisite>HighMechtech</researchPrerequisite>
+      <recipeUsers>
+        <li>LargeMechGestator</li>
+      </recipeUsers>
+      
+      <fixedIngredientFilter>
+        <categories>
+          <li>CorpsesHumanlike</li>
+        </categories>
+        <disallowedCategories>
+          <li>CorpsesMechanoid</li>
+          <li>CorpsesAnimal</li>
+          <li>CorpsesEntity</li>
+        </disallowedCategories>
+      </fixedIngredientFilter>
+      <defaultIngredientFilter>
+        <thingDefs>
+          <li>Corpse_Human</li>
+        </thingDefs>
+        <specialFiltersToAllow>
+          <li>AllowCorpsesColonist</li>
+          <li MayRequire="Ludeon.RimWorld.Ideology">AllowCorpsesSlave</li>
+          <li>AllowCorpsesStranger</li>
+        </specialFiltersToAllow>
+      </defaultIngredientFilter>
+      <autoStripCorpses>false</autoStripCorpses>
+  </RecipeDef>
+    
+<!--Laborer Recipe Def-->
+      <RecipeDef ParentName="Gha_MediumLaborerMechanoidRecipe">
+        <defName>Gha_Laborer</defName>
+        <label>gestate Laborer</label>
+        <description>Gestate a Laborer mechanoid.</description>
+        <ingredients Inherit="False">
+          <li>
+            <filter>
+              <thingDefs>
+                <li>Steel</li>
+              </thingDefs>
+            </filter>
+            <count>80</count>
+          </li>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>Plasteel</li>
+              </thingDefs>
+            </filter>
+            <count>40</count>
+          </li>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>ComponentIndustrial</li>
+              </thingDefs>
+            </filter>
+            <count>4</count>
+          </li>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>SubcoreRegular</li>
+              </thingDefs>
+            </filter>
+            <count>1</count>
+          </li>
+            <li>
+              <filter>
+                <categories>
+                  <li>CorpsesHumanlike</li>
+                </categories>
+              </filter>
+              <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+          <Gha_Corpse_Laborer>1</Gha_Corpse_Laborer>
+        </products>
+        <descriptionHyperlinks>
+          <ThingDef>Gha_Corpse_Laborer</ThingDef>
+        </descriptionHyperlinks>
+      </RecipeDef>
+      
+      <!--==Combat Laborer==-->
+      <RecipeDef ParentName="Gha_MediumLaborerMechanoidRecipe">
+        <defName>Gha_Combat_Laborer</defName>
+        <label>gestate Combat Laborer</label>
+        <description>Gestate a Combat Laborer mechanoid.</description>
+        <ingredients Inherit="False">
+          <li>
+            <filter>
+              <thingDefs>
+                <li>Steel</li>
+              </thingDefs>
+            </filter>
+            <count>100</count>
+          </li>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>Plasteel</li>
+              </thingDefs>
+            </filter>
+            <count>60</count>
+          </li>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>ComponentSpacer</li>
+              </thingDefs>
+            </filter>
+            <count>2</count>
+          </li>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>SubcoreRegular</li>
+              </thingDefs>
+            </filter>
+            <count>1</count>
+          </li>
+            <li>
+              <filter>
+                <categories>
+                  <li>CorpsesHumanlike</li>
+                </categories>
+              </filter>
+              <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+          <Gha_Combat_Laborer>1</Gha_Combat_Laborer>
+        </products>
+        <descriptionHyperlinks>
+          <ThingDef>Gha_Combat_Laborer</ThingDef>
+        </descriptionHyperlinks>
+      </RecipeDef>
+
+      <!--===Assasin Laborer===-->
+      <RecipeDef ParentName="Gha_MediumAssassinLaborerMechanoidRecipe" MayRequire="Ludeon.RimWorld.Anomaly">
+        <defName>Gha_Assassin_Laborer</defName>
+        <label>gestate Assassin Laborer</label>
+        <description>Gestate an Assassin Laborer mechanoid.</description>
+        <ingredients Inherit="False">
+          <li>
+            <filter>
+              <thingDefs>
+                <li MayRequire="Ludeon.RimWorld.Anomaly">RevenantSpine</li>
+              </thingDefs>
+            </filter>
+            <count>1</count>
+          </li>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>Steel</li>
+              </thingDefs>
+            </filter>
+            <count>100</count>
+          </li>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>Plasteel</li>
+              </thingDefs>
+            </filter>
+            <count>80</count>
+          </li>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>ComponentSpacer</li>
+              </thingDefs>
+            </filter>
+            <count>3</count>
+          </li>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>SubcoreHigh</li>
+              </thingDefs>
+            </filter>
+            <count>1</count>
+          </li>
+            <li>
+              <filter>
+                <categories>
+                  <li>CorpsesHumanlike</li>
+                </categories>
+              </filter>
+              <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+          <Gha_Assassin_Laborer>1</Gha_Assassin_Laborer>
+        </products>
+        <descriptionHyperlinks>
+          <ThingDef>Gha_Assassin_Laborer</ThingDef>
+        </descriptionHyperlinks>
+      </RecipeDef>
+</Defs>

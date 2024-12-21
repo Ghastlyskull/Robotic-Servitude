@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="Gha_MediumMechanoid" ParentName="BaseMechanoid" Abstract="True">
+    <statBases>
+      <MarketValue>800</MarketValue>
+      <MoveSpeed>3.4</MoveSpeed>
+      <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+      <MechEnergyLossPerHP>0.66</MechEnergyLossPerHP>
+    </statBases>
+    <race>
+      <body>Scorcher</body>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Gha_Laborer</thinkTreeMain>
+      <baseBodySize>0.7</baseBodySize>
+      <mechWeightClass>Medium</mechWeightClass>
+    </race>
+    <butcherProducts>
+      <Steel>10</Steel>
+    </butcherProducts>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef Name="Gha_MediumMechanoidKind" ParentName="BaseMechanoidKind" Abstract="True">
+    <weaponMoney>9999~9999</weaponMoney>
+    <combatPower>10</combatPower>
+    <weaponTags></weaponTags>
+    <techHediffsChance>1</techHediffsChance>
+    <techHediffsMoney>9999~9999</techHediffsMoney>
+    <controlGroupPortraitZoom>1.8</controlGroupPortraitZoom>
+	<destroyGearOnDrop>false</destroyGearOnDrop>
+  </PawnKindDef>
+
+  <PawnKindDef Name="Gha_NonCombatMediumMechanoidKind" ParentName="Gha_MediumMechanoidKind" Abstract="True">
+    <isFighter>false</isFighter>
+  </PawnKindDef>
+  
+<!--===Corpse Laborer===-->
+<ThingDef ParentName="Gha_MediumMechanoid">
+  <defName>Gha_Corpse_Laborer</defName>
+  <label>Laborer</label>
+  <description>A reanimated pawn brought back to life to serve its new masters. Bound to serve eternally, these tireless entities perform the colony's laborious tasks.</description>
+  <statBases>
+    <FoodPoisonChance>0.010</FoodPoisonChance>
+    <MoveSpeed>4.5</MoveSpeed>
+    <BandwidthCost>1</BandwidthCost>
+  </statBases>
+  <tools>
+    <li>
+      <label>front left leg</label>
+      <labelNoLocation>leg</labelNoLocation>
+      <capacities>
+        <li>Blunt</li>
+      </capacities>
+      <power>12.0</power>
+      <cooldownTime>2</cooldownTime>
+      <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+    </li>
+    <li>
+      <label>front right leg</label>
+      <labelNoLocation>leg</labelNoLocation>
+      <capacities>
+        <li>Blunt</li>
+      </capacities>
+      <power>12.0</power>
+      <cooldownTime>2</cooldownTime>
+      <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+      <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+    </li>
+    <li>
+      <label>head</label>
+      <capacities>
+        <li>Blunt</li>
+      </capacities>
+      <power>8.5</power>
+      <cooldownTime>2</cooldownTime>
+      <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      <chanceFactor>0.2</chanceFactor>
+    </li>
+  </tools>
+  <race>
+    <body>Gha_Laborer</body>
+    <baseHealthScale>0.7</baseHealthScale>
+    <!--==Adding fabrication abilities==-->
+    <mechEnabledWorkTypes>
+      <li>Crafting</li>
+      <li>Smithing</li>
+      <li>Tailoring</li>
+      <li>Cooking</li>
+      <li>Cleaning</li>
+      <li>Hauling</li>
+      <li>Mining</li>
+      <li>Construction</li>
+    </mechEnabledWorkTypes>
+    <lifeStageAges Inherit="False">
+      <li>
+        <def>MechanoidFullyFormed</def>
+        <minAge>0</minAge>
+        <soundWounded>Pawn_Mech_Scorcher_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Scorcher_Death</soundDeath>
+        <soundCall>Pawn_Mech_Scorcher_Call</soundCall>
+      </li>
+      <li>
+        <def>MechanoidFullyFormed</def>
+        <minAge>100</minAge>
+        <soundWounded>Pawn_Mech_Scorcher_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Scorcher_Death</soundDeath>
+        <soundCall>Pawn_Mech_Scorcher_Call</soundCall>
+      </li>
+    </lifeStageAges>
+    <mechWeightClass>Medium</mechWeightClass>
+    <detritusLeavings>
+      <li>
+        <def>ChunkMechanoidSlag</def>
+        <texOverrideIndex>11</texOverrideIndex>
+        <spawnChance>0.1</spawnChance>
+      </li>
+      <li>
+        <def>ChunkMechanoidSlag</def>
+        <texOverrideIndex>16</texOverrideIndex>
+        <spawnChance>0.1</spawnChance>
+      </li>
+      <li>
+        <def>ChunkMechanoidSlag</def>
+        <texOverrideIndex>1</texOverrideIndex>
+        <spawnChance>0.1</spawnChance>
+      </li>
+    </detritusLeavings>
+  </race>
+  <comps>
+	<li Class="RoboticServitude.CompProperties_GlitchVolatility">
+		<mentalBreakRatePerDay>1</mentalBreakRatePerDay>
+		<mentalBreaks>
+			<li>Wander_Psychotic</li>
+			<li>Wander_Sad</li>
+		</mentalBreaks>
+	</li>
+  </comps>
+</ThingDef>
+
+<PawnKindDef ParentName="Gha_NonCombatMediumMechanoidKind">
+  <defName>Gha_Corpse_Laborer</defName>
+  <label>Laborer</label>
+  <labelPlural>Laborers</labelPlural>
+  <race>Gha_Corpse_Laborer</race>
+  <combatPower>75</combatPower>
+  <isFighter>false</isFighter>
+  <lifeStages>
+    <li MayRequire="Ludeon.RimWorld.Biotech">
+      <bodyGraphicData>
+        <texPath>Things/Pawn/Mechanoid/CorpseLaborer/Servant</texPath>
+        <maskPath>Things/Pawn/Mechanoid/CorpseLaborer/AllegianceOverlays/Overlay_Servant</maskPath>
+        <shaderType>CutoutWithOverlay</shaderType>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>1.7</drawSize>
+      </bodyGraphicData>
+    </li>
+    <li>
+      <bodyGraphicData>
+        <texPath>Things/Pawn/Mechanoid/CorpseLaborer/Servant</texPath>
+        <maskPath>Things/Pawn/Mechanoid/CorpseLaborer/AllegianceOverlays/Overlay_Servant</maskPath>
+        <shaderType>CutoutWithOverlay</shaderType>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>1.7</drawSize>
+      </bodyGraphicData>
+    </li>
+  </lifeStages>
+</PawnKindDef>
+
+
+<!--===Combat Laborer===-->
+<ThingDef ParentName="LancerMechanoidWalker">
+  <defName>Gha_Combat_Laborer</defName>
+  <label>Combat Laborer</label>
+  <description>Taking the original design of the corpse laborers and modifying it, pirates and rimworld colonies found ways to improve the corpse laborers to make the first combat laborers, by adding more armor on top of the design. Eventually their designs were streamlined to create an effective disposable soldier in dire times.</description>
+  <statBases>
+    <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+    <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+  </statBases>
+  <race>
+      <thinkTreeMain>Gha_Laborer</thinkTreeMain>
+      <baseHealthScale>0.9</baseHealthScale>
+    <lifeStageAges Inherit="False">
+      <li>
+        <def>MechanoidFullyFormed</def>
+        <minAge>0</minAge>
+        <soundWounded>Pawn_Mech_Scorcher_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Scorcher_Death</soundDeath>
+        <soundCall>Pawn_Mech_Scorcher_Call</soundCall>
+      </li>
+      <li>
+        <def>MechanoidFullyFormed</def>
+        <minAge>100</minAge>
+        <soundWounded>Pawn_Mech_Scorcher_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Scorcher_Death</soundDeath>
+        <soundCall>Pawn_Mech_Scorcher_Call</soundCall>
+      </li>
+    </lifeStageAges>
+    <detritusLeavings>
+      <li>
+        <def>ChunkMechanoidSlag</def>
+        <texOverrideIndex>11</texOverrideIndex>
+        <spawnChance>0.1</spawnChance>
+      </li>
+      <li>
+        <def>ChunkMechanoidSlag</def>
+        <texOverrideIndex>1</texOverrideIndex>
+        <spawnChance>0.1</spawnChance>
+      </li>
+    </detritusLeavings>
+  </race>
+  <statBases>
+    <BandwidthCost>3</BandwidthCost>
+    <ControlTakingTime>18</ControlTakingTime>
+  </statBases>
+  <comps>
+	<li Class="RoboticServitude.CompProperties_GlitchVolatility">
+		<mentalBreakRatePerDay>1</mentalBreakRatePerDay>
+		<mentalBreaks>
+			<li>Wander_Psychotic</li>
+			<li>Wander_Sad</li>
+			<li>Berserk</li>
+			<li>MurderousRage</li>
+		</mentalBreaks>
+	</li>
+	  <li>
+			<compClass>RoboticServitude.CompCanEquipWeapons</compClass>
+    </li>
+  </comps>
+</ThingDef>
+
+<PawnKindDef ParentName="BaseMechanoidKind">
+  <defName>Gha_Combat_Laborer</defName>
+  <label>Combat Laborer</label>
+  <race>Gha_Combat_Laborer</race>
+  <combatPower>150</combatPower>
+  <lifeStages>
+    <li>
+      <bodyGraphicData>
+        <texPath>Things/Pawn/Mechanoid/CombatLaborer/CombatLaborer</texPath>
+        <maskPath>Things/Pawn/Mechanoid/CombatLaborer/AllegianceOverlays/Overlay_CombatLaborer</maskPath>
+        <shaderType>CutoutWithOverlay</shaderType>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>1.7</drawSize>
+      </bodyGraphicData>
+    </li>
+    <li>
+      <bodyGraphicData>
+        <texPath>Things/Pawn/Mechanoid/CombatLaborer/CombatLaborer</texPath>
+        <maskPath>Things/Pawn/Mechanoid/CombatLaborer/AllegianceOverlays/Overlay_CombatLaborer</maskPath>
+        <shaderType>CutoutWithOverlay</shaderType>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>1.7</drawSize>
+      </bodyGraphicData>
+    </li>
+  </lifeStages>
+  <weaponMoney>9999~9999</weaponMoney>
+  <techHediffsChance>1</techHediffsChance>
+  <fixedInventory>
+    <Gun_BoltActionRifle />
+  </fixedInventory>
+  <techHediffsMoney>9999~9999</techHediffsMoney>
+	<destroyGearOnDrop>false</destroyGearOnDrop>
+</PawnKindDef>
+
+<!--===Assasin Laborer===-->
+<ThingDef ParentName="LancerMechanoidWalker">
+  <defName>Gha_Assassin_Laborer</defName>
+  <label>Assassin Laborer</label>
+  <description>During the same time that the combat laborer was being streamlined, another version was being developed for ambushing and eliminating high ranking targets. The Implemented stealth technology allows for the assassin laborer to be invisible for a short period of time, to close gaps or reposition after faulty positioning.</description>
+  <statBases>
+    <MoveSpeed>5.8</MoveSpeed>
+    <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+    <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+  </statBases>
+  <race>
+      <thinkTreeMain>Gha_Laborer</thinkTreeMain>
+      <baseHealthScale>1.0</baseHealthScale>
+    <lifeStageAges Inherit="False">
+      <li>
+        <def>MechanoidFullyFormed</def>
+        <minAge>0</minAge>
+        <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+        <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+      </li>
+      <li>
+        <def>MechanoidFullyFormed</def>
+        <minAge>100</minAge>
+        <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+        <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+      </li>
+    </lifeStageAges>
+    <detritusLeavings>
+      <li>
+        <def>ChunkMechanoidSlag</def>
+        <texOverrideIndex>11</texOverrideIndex>
+        <spawnChance>0.1</spawnChance>
+      </li>
+      <li>
+        <def>ChunkMechanoidSlag</def>
+        <texOverrideIndex>1</texOverrideIndex>
+        <spawnChance>0.1</spawnChance>
+      </li>
+    </detritusLeavings>
+  </race>
+  <statBases>
+    <BandwidthCost>4</BandwidthCost>
+    <ControlTakingTime>18</ControlTakingTime>
+  </statBases>
+  <comps>
+	<li Class="RoboticServitude.CompProperties_GlitchVolatility">
+		<mentalBreakRatePerDay>1</mentalBreakRatePerDay>
+		<mentalBreaks>
+			<li>Wander_Psychotic</li>
+			<li>Wander_Sad</li>
+			<li>Berserk</li>
+			<li>MurderousRage</li>
+		</mentalBreaks>
+	</li>
+	  <li>
+			<compClass>RoboticServitude.CompCanEquipWeapons</compClass>
+    </li>
+  </comps>
+</ThingDef>
+
+<PawnKindDef ParentName="BaseMechanoidKind" MayRequire="Ludeon.RimWorld.Anomaly">
+  <defName>Gha_Assassin_Laborer</defName>
+  <label>Assassin Laborer</label>
+  <race>Gha_Assassin_Laborer</race>
+  <combatPower>300</combatPower>
+  <lifeStages>
+    <li>
+      <bodyGraphicData>
+        <texPath>Things/Pawn/Mechanoid/Assassin/AssassinLaborer</texPath>
+        <maskPath>Things/Pawn/Mechanoid/Assassin/AllegianceOverlays/Overlay_AssassinLaborer</maskPath>
+        <shaderType>CutoutWithOverlay</shaderType>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>1.9</drawSize>
+      </bodyGraphicData>
+    </li>
+    <li>
+      <bodyGraphicData>
+        <texPath>Things/Pawn/Mechanoid/Assassin/AssassinLaborer</texPath>
+        <maskPath>Things/Pawn/Mechanoid/Assassin/AllegianceOverlays/Overlay_AssassinLaborer</maskPath>
+        <shaderType>CutoutWithOverlay</shaderType>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>1.9</drawSize>
+      </bodyGraphicData>
+    </li>
+  </lifeStages>
+  <weaponMoney>9999~9999</weaponMoney>
+  <techHediffsChance>1</techHediffsChance>
+  <fixedInventory>
+    <Gha_MeleeWeapon_AssassinBlade />
+  </fixedInventory>
+  <techHediffsMoney>9999~9999</techHediffsMoney>
+  <abilities>
+    <li>RevenantInvisibility</li>
+  </abilities>
+	<destroyGearOnDrop>false</destroyGearOnDrop>
+</PawnKindDef>
+</Defs>
