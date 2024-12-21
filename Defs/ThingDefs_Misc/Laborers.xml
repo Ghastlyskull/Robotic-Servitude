@@ -190,6 +190,8 @@
   <statBases>
     <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
     <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+    <BandwidthCost>3</BandwidthCost>
+    <ControlTakingTime>18</ControlTakingTime>
   </statBases>
   <race>
       <thinkTreeMain>Gha_Laborer</thinkTreeMain>
@@ -223,10 +225,6 @@
       </li>
     </detritusLeavings>
   </race>
-  <statBases>
-    <BandwidthCost>3</BandwidthCost>
-    <ControlTakingTime>18</ControlTakingTime>
-  </statBases>
   <comps>
 	<li Class="RoboticServitude.CompProperties_GlitchVolatility">
 		<mentalBreakRatePerDay>1</mentalBreakRatePerDay>
@@ -286,6 +284,8 @@
     <MoveSpeed>5.8</MoveSpeed>
     <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
     <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+    <BandwidthCost>4</BandwidthCost>
+    <ControlTakingTime>18</ControlTakingTime>
   </statBases>
   <race>
       <thinkTreeMain>Gha_Laborer</thinkTreeMain>
@@ -319,10 +319,6 @@
       </li>
     </detritusLeavings>
   </race>
-  <statBases>
-    <BandwidthCost>4</BandwidthCost>
-    <ControlTakingTime>18</ControlTakingTime>
-  </statBases>
   <comps>
 	<li Class="RoboticServitude.CompProperties_GlitchVolatility">
 		<mentalBreakRatePerDay>1</mentalBreakRatePerDay>
