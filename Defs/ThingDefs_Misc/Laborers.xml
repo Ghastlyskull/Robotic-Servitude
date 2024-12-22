@@ -246,6 +246,7 @@
   <label>Combat Laborer</label>
   <race>Gha_Combat_Laborer</race>
   <combatPower>150</combatPower>
+  <weaponTags></weaponTags>
   <lifeStages>
     <li>
       <bodyGraphicData>
@@ -340,6 +341,7 @@
   <label>Assassin Laborer</label>
   <race>Gha_Assassin_Laborer</race>
   <combatPower>300</combatPower>
+  <weaponTags></weaponTags>
   <lifeStages>
     <li>
       <bodyGraphicData>
