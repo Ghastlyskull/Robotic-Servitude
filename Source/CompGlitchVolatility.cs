@@ -1,9 +1,13 @@
 ﻿using RimWorld;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
 using Verse;
 namespace RoboticServitude
 {
     public class CompGlitchVolatility : ThingComp
     {
+        public bool autoFix = false;
         public CompProperties_GlitchVolatility Props => props as CompProperties_GlitchVolatility;
         public int? nextMentalBreakTick;
         public Effecter effecter;
@@ -31,6 +35,22 @@ namespace RoboticServitude
                 }
             }
         }
+        public override IEnumerable<Gizmo> CompGetGizmosExtra()
+        {
+            if (parent.Faction == Faction.OfPlayer)
+            {
+                Command_Toggle command_Toggle = new Command_Toggle();
+                command_Toggle.defaultLabel = "RS.AutoFix".Translate();
+                command_Toggle.defaultDesc = "RS.AutoFixDesc".Translate();
+                command_Toggle.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/AutoRepair");
+                command_Toggle.isActive = () => autoFix;
+                command_Toggle.toggleAction = (Action)Delegate.Combine(command_Toggle.toggleAction, (Action)delegate
+                {
+                    autoFix = !autoFix;
+                });
+                yield return command_Toggle;
+            }
+        }
 
         public void SetNextMentalBreakTick()
         {
@@ -48,6 +68,7 @@ namespace RoboticServitude
         {
             base.PostExposeData();
             Scribe_Values.Look(ref nextMentalBreakTick, "nextMentalBreakTick");
+            Scribe_Values.Look(ref autoFix, "autoFix", false);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 if (nextMentalBreakTick == 0)

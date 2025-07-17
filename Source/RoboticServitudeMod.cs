@@ -30,7 +30,7 @@ namespace RoboticServitude
             Startup.ApplySettings();
             if (Current.Game != null)
             {
-                foreach (var pawn in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive)
+                foreach (var pawn in PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive)
                 {
                     var comp = pawn.GetComp<CompGlitchVolatility>();
                     if (comp != null)

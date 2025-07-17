@@ -12,24 +12,38 @@ namespace RoboticServitude
         {
             return pawn.Reserve(Mech, job, 1, -1, null, errorOnFailed);
         }
-        public override IEnumerable<Toil> MakeNewToils()
+        protected override IEnumerable<Toil> MakeNewToils()
         {
+            AddFinishAction((JobCondition cond) =>
+            {
+
+                if (Mech != null)
+                {
+                    if (Mech.jobs?.curJob != null)
+                    {
+                        Mech.jobs.EndCurrentJob(JobCondition.InterruptForced);
+                    }
+                }
+
+            });
             this.FailOnDestroyedOrNull(TargetIndex.A);
             this.FailOnForbidden(TargetIndex.A);
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
-            Toil toil = Toils_General.WaitWith(TargetIndex.A, 2 * GenDate.TicksPerHour, useProgressBar: true, maintainPosture: true, maintainSleep: true);
+            int ticks = 2 * GenDate.TicksPerHour;
+            Toil goToil = Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
+            yield return goToil;
+            Toil toil = Toils_General.WaitWith(TargetIndex.A, ticks, useProgressBar: true, maintainPosture: false, maintainSleep: true, TargetIndex.A);
             toil.WithEffect(EffecterDefOf.MechRepairing, TargetIndex.A);
             toil.PlaySustainerOrSound(SoundDefOf.RepairMech_Touch);
-            toil.AddFinishAction(delegate
-            {
-                Mech.mindState.mentalStateHandler.CurState.RecoverFromState();
-                if (Mech.jobs?.curJob != null)
-                {
-                    Mech.jobs.EndCurrentJob(JobCondition.InterruptForced);
-                }
-            });
             toil.AddEndCondition(() => Mech.InMentalState ? JobCondition.Ongoing : JobCondition.Succeeded);
             yield return toil;
+            yield return Toils_General.Do(() =>
+            {
+                if (Mech != null)
+                {
+                    Mech.mindState.mentalStateHandler.CurState.RecoverFromState();
+                }
+            });
         }
+
     }
 }

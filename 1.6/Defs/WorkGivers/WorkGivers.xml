@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <WorkGiverDef>
+    <defName>FixMalfunction</defName>
+    <label>fix malfunction</label>
+    <giverClass>RoboticServitude.WorkGiver_FixMalfunction</giverClass>
+    <workType>Smithing</workType>
+    <verb>fix</verb>
+    <gerund>fixing</gerund>
+    <priorityInType>201</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+    <canBeDoneWhileDrafted>true</canBeDoneWhileDrafted>
+  </WorkGiverDef>
+</Defs>
