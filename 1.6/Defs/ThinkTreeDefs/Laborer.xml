@@ -90,6 +90,7 @@
                     <li Class="RoboticServitude.ThinkNode_ConditionalCanFix">
                       <subNodes>
                         <li Class="RoboticServitude.JobGiver_FixMalfunction"/>
+                        <li Class="RoboticServitude.JobGiver_LaborerRepairMech"/>
                       </subNodes>
                     </li>
                     <li Class="JobGiver_SeekAllowedArea" />
