@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using HarmonyLib;
+using RimWorld;
 using VEF.Apparels;
 using Verse;
 namespace VEFCompat
@@ -14,7 +15,7 @@ namespace VEFCompat
     {
         static HarmonyStarter()
         {
-            Log.Message("test");
+            //Log.Message("test");
             Harmony harmony = new Harmony("RoboticServitude.VEFCompat");
             harmony.PatchAll();
         }
@@ -28,11 +29,13 @@ namespace VEFCompat
         }
         public static void Postfix(ref bool __result, Pawn pawn)
         {
-            Log.Message("Rah");
+            //Log.Message("Rah");
             if (!__result && pawn.HasComp<RoboticServitude.CompCanEquipWeapons>())
             {
+                //Log.Message("rah1");
                 if (pawn.GetComp<RoboticServitude.CompCanEquipWeapons>().Props.canEquipHeavyWeapons)
                 {
+                    //Log.Message("rah2");
                     __result = true;
                 }
             }

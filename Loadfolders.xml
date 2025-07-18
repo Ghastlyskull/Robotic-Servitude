@@ -8,5 +8,6 @@
 		<li>/</li>
 		<li>1.6</li>
     <li IfModActive="oskarpotocki.vanillafactionsexpanded.core">1.6/Compatibility/VEF</li>
+    <li IfModActive="oskarpotocki.vfe.pirates">1.6/Compatibility/VFEPirates</li>
 	</v1.6>
 </loadFolders>
