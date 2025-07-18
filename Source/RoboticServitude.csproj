@@ -91,6 +91,7 @@
     <Compile Include="ThinkNode_ConditionalCanFix.cs" />
     <Compile Include="Widgets_GetIconFor_Patch.cs" />
     <Compile Include="WorkGiver_FixMalfunction.cs" />
+    <Compile Include="JobGiver_LaborerRepairMech.cs" />
   </ItemGroup>
   <ItemGroup>
     <Publicize Include="Assembly-CSharp:RimWorld.ITab_Pawn_Gear.SelPawnForGear" />
