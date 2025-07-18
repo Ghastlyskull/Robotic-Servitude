@@ -425,7 +425,7 @@
           <maskPath>Things/Pawn/Mechanoid/SkullLaborer/AllegianceOverlays/Overlay_SkullLaborer</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.1</drawSize>
+          <drawSize>1.4</drawSize>
         </bodyGraphicData>
       </li>
       <li>
@@ -434,7 +434,7 @@
           <maskPath>Things/Pawn/Mechanoid/SkullLaborer/AllegianceOverlays/Overlay_SkullLaborer</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.1</drawSize>
+          <drawSize>1.4</drawSize>
         </bodyGraphicData>
       </li>
     </lifeStages>
