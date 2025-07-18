@@ -2,5 +2,7 @@
 <LanguageData>
 
 	<RS.FixMalfunctions>Fix malfunctions</RS.FixMalfunctions>
-	
+  <RS.CannotFix>Cannot fix laborer</RS.CannotFix>
+  <RS.AutoFix>Auto-Fix</RS.AutoFix>
+  <RS.AutoFixDesc>Auto-fix malfunctioning laborers.</RS.AutoFixDesc>
 </LanguageData>

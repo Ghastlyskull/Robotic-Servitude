@@ -19,6 +19,7 @@
 		<li>Ludeon.RimWorld.Royalty</li>
 		<li>Ludeon.RimWorld.Biotech</li>
 		<li>brrainz.harmony</li>
+    <li>oskarpotocki.vfe.pirates</li>
 	</loadAfter>
     <description>Revive the battlefield's fallen with 3 new mechs, Corpse Laborer, Combat Laborer, and Assassin Laborer</description>
 </ModMetaData>
