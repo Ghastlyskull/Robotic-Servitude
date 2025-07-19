@@ -21,7 +21,8 @@ namespace RoboticServitude
             if (__instance?.ActiveBill?.recipe != null &&
                 (DefDatabase<RecipeDef>.GetNamed("Gha_Laborer") == __instance.ActiveBill.recipe ||
                  DefDatabase<RecipeDef>.GetNamed("Gha_Combat_Laborer") == __instance.ActiveBill.recipe ||
-                 DefDatabase<RecipeDef>.GetNamed("Gha_Assassin_Laborer") == __instance.ActiveBill.recipe))
+                 DefDatabase<RecipeDef>.GetNamed("Gha_Assassin_Laborer") == __instance.ActiveBill.recipe ||
+                  DefDatabase<RecipeDef>.GetNamed("Gha_Breacher_Laborer") == __instance.ActiveBill.recipe))
             {
                 // Log the active recipe for debugging purposes
                 Log.Message($"[{VersionIdentifier}] - Active Recipe Detected: {__instance.ActiveBill.recipe.defName}");
