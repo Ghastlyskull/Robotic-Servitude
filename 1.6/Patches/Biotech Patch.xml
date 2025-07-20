@@ -52,4 +52,38 @@
 			</operations>
 		</match>
 	</Operation>
+	<!---->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+                    <xpath>Defs/RecipeDef[defName = "ResurrectHeavyMech"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>Corpse_Gha_Breacher_Laborer</li>
+                    </value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<!---->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+                    <xpath>Defs/RecipeDef[defName = "ResurrectLightMech"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>Corpse_Gha_Skull_Laborer</li>
+                    </value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
 </Patch>
