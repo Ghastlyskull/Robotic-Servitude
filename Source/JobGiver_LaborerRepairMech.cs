@@ -27,6 +27,10 @@ namespace RoboticServitude
         {
             List<Pawn> potential = [..pawn.Map.mapPawns.SpawnedPawnsInFaction(pawn.Faction).Where((c) =>
             {
+                if(pawn == c)
+                {
+                    return false;
+                }
                 CompMechRepairable compMechRepairable = c.TryGetComp<CompMechRepairable>();
                 if (compMechRepairable == null)
                 {
