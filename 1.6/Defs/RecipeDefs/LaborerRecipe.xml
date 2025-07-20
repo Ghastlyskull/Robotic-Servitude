@@ -2,7 +2,7 @@
 <Defs>
     <RecipeDef Name="Gha_HeavyLaborerMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
         <gestationCycles>4</gestationCycles>
-        <researchPrerequisite>StandardMechtech</researchPrerequisite>
+        <researchPrerequisite>HighMechtech</researchPrerequisite>
         <recipeUsers>
           <li>LargeMechGestator</li>
         </recipeUsers>
