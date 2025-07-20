@@ -42,6 +42,10 @@ namespace RoboticServitude
             {
                 return false;
             }
+            if (!pawn2.InMentalState)
+            {
+                return false;
+            }
             if (!pawn.CanReserve(t, 1, -1, null, forced))
             {
                 return false;
